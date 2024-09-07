@@ -3,17 +3,15 @@ from selene import browser
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 # from selene import Browser, Config
-
 from utils import attach
 
 
 @pytest.fixture(scope='function')
-def setup_browser(request):
+def setup_browser():
     browser.config.base_url = 'https://demoqa.com'
     browser.config.window_height = 1080
     browser.config.window_width = 1920
     options = Options()
-    options.page_load_strategy = 'eager'
     selenoid_capabilities = {
         "browserName": "chrome",
         "browserVersion": "100.0",
