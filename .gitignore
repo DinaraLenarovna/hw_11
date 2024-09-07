@@ -2,3 +2,4 @@ venv/
 .idea/
 tests/allure-results/
 __pycache__/
+.env
