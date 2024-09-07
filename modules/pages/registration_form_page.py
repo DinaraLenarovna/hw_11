@@ -67,7 +67,7 @@ class RegistrationPage:
         browser.element('#react-select-4-input').type(value).press_enter()
 
     def submit(self):
-        browser.element('#submit').click()
+        browser.element('#submit').press_enter()
 
     def assert_user_submitted_form(self, name_and_lastname, email, gender, phone_number, date_of_birth,
                                    subject, hobbies, image, address, state_and_city):
